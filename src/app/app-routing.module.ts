@@ -7,9 +7,11 @@ import { CaliculatorComponent } from './caliculator/caliculator.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
 
 const routes: Routes = [{path:'',component:DashboardComponent,children:[{path:'home',component:HomeComponent},{path:'welcome',component:WelcomeComponent}
- , {path:'caliculator',component:CaliculatorComponent},{path:'bmi',component:BmiComponent},{path:'rectangle',component:RectangleComponent},{path:'circle',component:CircleComponent}
+ , {path:'caliculator',component:CaliculatorComponent},{path:'bmi',component:BmiComponent},{path:'rectangle',component:RectangleComponent},{path:'circle',component:CircleComponent},
+ {path:'data-binding',component:DataBindingComponent}
 ]}];
 
 @NgModule({
