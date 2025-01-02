@@ -1,0 +1,35 @@
+<!-- <label for="">Name</label>
+<input type="text"><br>
+<label for="">Email</label>
+<input type="email"><br>
+<label for="">Mobile</label>
+<input type="number"><br> -->
+
+<!-- event binding -->
+
+
+<!-- interpolatio  -->
+<h3>name:{{name}}</h3>
+<h3>age:{{age}}</h3>
+<h3>email:{{email}}</h3>
+<h3>Nationality:{{isIndian}}</h3>
+<!-- two way binding -->
+ <input type="text" [(ngModel)]='phone'>
+
+<button (click)="submit()">submit</button>
+<input [disabled]="isIndian" type="text" (keyup)="typing()"><br>
+
+<label for="">num1</label>
+<input type="number" [(ngModel)]="num1"><br>
+<label for="">num2</label>
+<input type="number" [(ngModel)]="num2"><br>
+<button [disabled]="!num1 ||!num2" (click)="sum()">sum</button>
+
+<h2>Sum is :{{result}}</h2>
+
+
+
+
+
+
+

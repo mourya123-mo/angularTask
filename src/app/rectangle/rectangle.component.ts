@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class RectangleComponent {
 
+  result:number=0;
+ length:number=0;
+ width:number=0;
+
+  areaSubmit(){
+    this.result=this.length*this.width;
+    console.log(this.result);
+  }
+  perimeterSubmit(){
+    this.result=2*(this.length+this.width);
+    console.log(this.result);
+  }
 }

@@ -10,6 +10,8 @@ import { CaliculatorComponent } from './caliculator/caliculator.component';
 import { BmiComponent } from './bmi/bmi.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { CircleComponent } from './circle/circle.component';
     CaliculatorComponent,
     BmiComponent,
     RectangleComponent,
-    CircleComponent
+    CircleComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
