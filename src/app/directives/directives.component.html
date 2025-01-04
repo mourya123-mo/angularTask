@@ -28,7 +28,7 @@
             <td>{{i+1}}</td>
             <td>{{product.productName}}</td>
             <!-- <td [ngStyle]="{'color':product.price<=50000? 'green':'red'}">{{product.price}}</td> -->
-            <td [ngClass]="{'green':product.price<=5000,'red':product.price>1000000} ">{{product.price}}</td>
+            <td [ngClass]="{'green':product.price<=5000,'red':product.price>1000000} ">{{product.price|currency}}</td>
         </tr>
 
     </tbody>
