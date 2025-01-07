@@ -11,6 +11,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { LoginComponent } from './login/login.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:'data-binding',component:DataBindingComponent},
 {path:'directives',component:DirectivesComponent},
 {path:"pipes",component:PipesComponent},
+{path:"employee",component:EmployeeComponent}
 ]}]
 
 @NgModule({
