@@ -1,0 +1,35 @@
+#main{
+    display: flex;
+    height: 40%;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(153, 153, 228);
+}
+.main1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+
+}
+.search{
+    display: flex; 
+    gap: 20px;
+}
+.range{
+    display: flex; 
+    gap: 20px; 
+}
+.prices{
+    display: flex; 
+    gap: 20px;   
+}
+.charge{
+    display: flex; 
+    gap: 20px; 
+}
+#main2{
+   padding-top: 5%;
+}

@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.css']
 })
-export class EmployeeComponent {
+export class EmployeeComponent {  
 
   employees: any = [
     { name: 'sandeep', experience: 4, package: 1200000, role: 'UIDeveloper' },
@@ -35,7 +35,7 @@ export class EmployeeComponent {
 
   text:string="";
   search(){
-   this.employees= this.employees.filter((employee:any)=>employee.name.includes(this.text));
+    this.employees.filter((employee:any)=>employee.name.includes(this.text));
   }
   hike(){
     this.employees.map((m:any)=>{
