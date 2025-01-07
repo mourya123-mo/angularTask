@@ -16,6 +16,7 @@ import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EmployeeComponent } from './employee/employee.component';
     DirectivesComponent,
     PipesComponent,
     LoginComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    FlipkartComponent
   ],
   imports: [
     BrowserModule,
