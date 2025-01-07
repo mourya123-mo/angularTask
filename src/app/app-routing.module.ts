@@ -13,6 +13,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -25,7 +26,9 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:'directives',component:DirectivesComponent},
 {path:"pipes",component:PipesComponent},
 {path:"employee",component:EmployeeComponent},
-{path:"flipkart",component:FlipkartComponent}
+{path:"flipkart",component:FlipkartComponent},
+{path:"vehicle",component:VehicleComponent}
+
 ]}]
 
 @NgModule({
