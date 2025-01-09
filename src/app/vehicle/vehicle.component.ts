@@ -8,11 +8,22 @@ import { VehicleService } from '../vehicle.service';
 })
 export class VehicleComponent {
   vehicles:any=[];
+  term:string="";
   constructor(private _vehicleSevice:VehicleService){
     _vehicleSevice.getVehicles().subscribe(
       (data:any)=>{
         this.vehicles=data;
         console.log(this.vehicles);
+      }
+    )
+  }
+  filter(){
+    this._vehicleSevice.getFilteredVehicles(this.term).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+        console.log(this.vehicles);
+      },(err:any)=>{
+        alert("Internal service error")
       }
     )
   }
