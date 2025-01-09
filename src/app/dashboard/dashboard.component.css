@@ -8,11 +8,12 @@
 .left {
   height: 100%;
   width: 20%;
-  background-color: rgb(37, 35, 59);
+  background-color: rgb(149, 147, 176);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: auto;
 }
 .components {
   display: flex;
@@ -23,6 +24,8 @@
   height: 80%;
   width: 100%;
   overflow: auto;
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .tittle {
   height: 10%;
@@ -31,6 +34,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: black;
 }
 .logout {
   height: 10%;
@@ -43,10 +47,10 @@
 button {
   height: 40%;
   width: 50%;
-  background-color: brown;
+  background-color: rgb(185, 21, 21);
   border: 0px;
   outline: 0;
-  color: white;
+  color: rgb(20, 17, 17);
 }
 .right {
   height: 99.9%;

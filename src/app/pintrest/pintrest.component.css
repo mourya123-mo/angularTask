@@ -1,0 +1,45 @@
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+.card{
+    height: 300px;
+    width: 250px;
+    border: 1px solid black;
+   justify-content: center;
+   align-items: center;
+    margin: 10px;
+    position: relative;
+
+}
+img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+h6{
+    z-index: 1000;
+    color: rgb(17, 4, 4);
+    width: 100%;
+    position: absolute;
+    bottom: 30%;
+    left: 22%;
+    display: none;
+
+
+}
+a{
+    z-index: 1000;
+    position: absolute;
+    left: 32%;
+    bottom: 40%;
+    display: none;
+
+}
+.image:hover~ h6,
+.image:hover~ a{
+    display: block;
+}

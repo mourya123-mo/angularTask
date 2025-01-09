@@ -1,0 +1,43 @@
+.blue{
+    color: blue;
+}
+.yellow{
+    color: yellow;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+svg{
+    width: 200px;
+    height: 100px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: centre;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+  
+    height: 400px;
+    width: 450px;
+    font-family:'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+.parent{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    background-color: whitesmoke;
+}
+.weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
