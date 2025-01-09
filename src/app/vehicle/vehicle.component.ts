@@ -9,6 +9,8 @@ import { VehicleService } from '../vehicle.service';
 export class VehicleComponent {
   vehicles:any=[];
   term:string="";
+  column:string="";
+  order:string="";
   constructor(private _vehicleSevice:VehicleService){
     _vehicleSevice.getVehicles().subscribe(
       (data:any)=>{
@@ -19,6 +21,16 @@ export class VehicleComponent {
   }
   filter(){
     this._vehicleSevice.getFilteredVehicles(this.term).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+        console.log(this.vehicles);
+      },(err:any)=>{
+        alert("Internal service error")
+      }
+    )
+  }
+  sort(){
+    this._vehicleSevice.getSortedVehicles(this.column,this.order).subscribe(
       (data:any)=>{
         this.vehicles=data;
         console.log(this.vehicles);
