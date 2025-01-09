@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    gap: 10px;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.gray{
+    font-weight: 900;
+}
+.black{
+    font-weight: 200;
+}

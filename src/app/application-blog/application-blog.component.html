@@ -1,0 +1,9 @@
+<div class="parent">
+    <div *ngFor="let blog of blogs" class="card">
+        <h6>{{blog.title}}</h6>
+        <div>
+            {{blog.author}}&nbsp;|&nbsp;{{blog.date_published}}
+        </div>
+        <p>{{blog.content}}</p>
+    </div>
+</div>

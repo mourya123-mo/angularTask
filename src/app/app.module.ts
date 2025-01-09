@@ -19,6 +19,12 @@ import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FlipkartApiComponent } from './flipkart-api/flipkart-api.component';
+import { MailComponent } from './mail/mail.component';
+import { PintrestComponent } from './pintrest/pintrest.component';
+import { WeatherApiComponent } from './weather-api/weather-api.component';
+import { ApplicationBlogComponent } from './application-blog/application-blog.component';
+import { IMDBComponent } from './imdb/imdb.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +42,13 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     EmployeeComponent,
     FlipkartComponent,
-    VehicleComponent
+    VehicleComponent,
+    FlipkartApiComponent,
+    MailComponent,
+    PintrestComponent,
+    WeatherApiComponent,
+    ApplicationBlogComponent,
+    IMDBComponent
   ],
   imports: [
     BrowserModule,

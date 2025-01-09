@@ -1,0 +1,32 @@
+h4{
+    text-transform: uppercase;
+    color: yellow;
+}
+.card{
+    height: 40%;
+    width: 80%;
+}
+.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    gap: 40px;
+}
+.btn{
+    width: 15%;
+    background-color: black;
+    border: 1px solid yellow;
+}
+.card{
+    background-color: rgb(29, 26, 26);
+   padding: 2%;
+   display: flex;
+   gap: 10px;
+}
+span{
+    color: white;
+}
+p{
+    color: white;
+}

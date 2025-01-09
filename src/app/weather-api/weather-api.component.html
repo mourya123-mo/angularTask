@@ -1,0 +1,19 @@
+<div class="parent">
+    <div class="card">
+        <div class="time">
+      Date&Time: {{time |date:'medium':'UTC+5:30'}}
+    </div>
+        <h4>Weather in Hydrabad</h4>
+        <div class="weather" [ngClass]="{'blue':weathers.current_weather.temperature <0,'yellow':weathers.current_weather.temperature>0 
+          && weathers.current_weather.temperature<=30 ,'green
+        ':weathers.current_weather.temperature >30,'red':weathers.current_weather.temperature >35}" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+          </svg> 
+            <h1>{{weathers.current_weather.temperature}}</h1>
+        </div>
+       <h4>wind Speed : {{weathers.current_weather.windspeed}}&nbsp;km/hr</h4>
+       <h4>wind Direction : {{weathers.current_weather.winddirection}}&nbsp;NE</h4>
+       <p>{{ weathers.current_weather.is_day === 1 ? 'Daytime' : 'Nighttime' }}</p>
+    </div>
+</div>
+<!-- <td [ngClass]="{'green':product.price<=5000,'red':product.price>1000000} ">{{product.price|currency}}</td> -->

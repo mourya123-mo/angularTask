@@ -14,6 +14,12 @@ import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
+import { FlipkartApiComponent } from './flipkart-api/flipkart-api.component';
+import { MailComponent } from './mail/mail.component';
+import { PintrestComponent } from './pintrest/pintrest.component';
+import { WeatherApiComponent } from './weather-api/weather-api.component';
+import { ApplicationBlogComponent } from './application-blog/application-blog.component';
+import { IMDBComponent } from './imdb/imdb.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -27,7 +33,16 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"pipes",component:PipesComponent},
 {path:"employee",component:EmployeeComponent},
 {path:"flipkart",component:FlipkartComponent},
-{path:"vehicle",component:VehicleComponent}
+{path:"vehicle",component:VehicleComponent},
+{path:"flipkartapi",component:FlipkartApiComponent},
+{path:"mail",component:MailComponent},
+{path:"Pintrust-Api",component:PintrestComponent},
+{path:"weather-Api",component:WeatherApiComponent},
+{path:"Blog-Api",component:ApplicationBlogComponent},
+{path:"imdb",component:IMDBComponent}
+
+
+
 
 ]}]
 

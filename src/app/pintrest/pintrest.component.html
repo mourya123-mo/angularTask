@@ -1,0 +1,8 @@
+<div class="parent">
+    <div *ngFor="let product of products" class="card">
+        <img class="image" src="{{product.download_url}}" alt="">
+        <h6 class="author"> {{product.author}}</h6>
+        <a class="btn btn-primary" href="{{product.download_url}}">Download</a>
+
+    </div>
+</div>
