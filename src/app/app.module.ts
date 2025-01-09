@@ -25,6 +25,7 @@ import { PintrestComponent } from './pintrest/pintrest.component';
 import { WeatherApiComponent } from './weather-api/weather-api.component';
 import { ApplicationBlogComponent } from './application-blog/application-blog.component';
 import { IMDBComponent } from './imdb/imdb.component';
+import { AccountsApiComponent } from './accounts-api/accounts-api.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { IMDBComponent } from './imdb/imdb.component';
     PintrestComponent,
     WeatherApiComponent,
     ApplicationBlogComponent,
-    IMDBComponent
+    IMDBComponent,
+    AccountsApiComponent
   ],
   imports: [
     BrowserModule,
