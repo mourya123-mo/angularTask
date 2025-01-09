@@ -12,7 +12,10 @@ export class VehicleComponent {
   column:string="";
   order:string="";
   constructor(private _vehicleSevice:VehicleService){
-    _vehicleSevice.getVehicles().subscribe(
+   this.pageLoad();
+  }
+  pageLoad(){
+    this._vehicleSevice.getVehicles().subscribe(
       (data:any)=>{
         this.vehicles=data;
         console.log(this.vehicles);
@@ -38,5 +41,30 @@ export class VehicleComponent {
         alert("Internal service error")
       }
     )
+  }
+  limit:number=0;
+  page:number=0;
+  pagination(){
+    this._vehicleSevice.getPaginatedVehicle(this.limit,this.page).subscribe(
+      (data:any)=>{
+        this.vehicles=data;
+        console.log(this.vehicles);
+      },(err:any)=>{
+        alert("Internal service error")
+      }
+    )
+  }
+  delete(id:number){
+    if(confirm("are you sure to delete")==true){
+      this._vehicleSevice.delete(id).subscribe((data:any)=>{
+        alert("Record deleted sucessfully")
+      },(err:any)=>{
+        alert("Internal service error");
+        this.pageLoad(); 
+      }
+    )
+    }else{
+      alert(" you have cancelled")
+    }
   }
 }
