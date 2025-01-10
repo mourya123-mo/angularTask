@@ -1,0 +1,23 @@
+<div class="parent">
+    <div *ngFor="let user of users" class="cards">
+        <img src="{{user.profilePic}}" alt="">
+        <h3>{{user.username}}</h3>
+        <p>{{user.bio}}</p>
+        <p>Locatin:{{user.location}}</p>
+        <p>Work:{{user.work}}</p>
+        <p >Hobies:{{user.hobbies}}</p>
+        <p >intrests:{{user.interests}}</p>
+        <h3>contact Info</h3>
+        <p *ngIf="!user.privacySettings.showEmail; else emailPrivate"><strong>Email:</strong>
+        {{user.email}}</p>
+        <ng-template #emailPrivate>
+            <p><strong>Email:</strong> Private Account</p>
+          </ng-template>
+        <p *ngIf="!user.privacySettings.showBirthDate ;else phonePrivate"><strong>BirthDate:</strong>
+        {{user.birthDate}}</p>
+        <ng-template #phonePrivate>
+            <p><strong>phone:</strong> Private Account</p>
+          </ng-template>
+
+    </div>
+</div>

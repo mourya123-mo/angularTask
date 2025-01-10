@@ -26,6 +26,7 @@ import { WeatherApiComponent } from './weather-api/weather-api.component';
 import { ApplicationBlogComponent } from './application-blog/application-blog.component';
 import { IMDBComponent } from './imdb/imdb.component';
 import { AccountsApiComponent } from './accounts-api/accounts-api.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AccountsApiComponent } from './accounts-api/accounts-api.component';
     WeatherApiComponent,
     ApplicationBlogComponent,
     IMDBComponent,
-    AccountsApiComponent
+    AccountsApiComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -21,6 +21,7 @@ import { WeatherApiComponent } from './weather-api/weather-api.component';
 import { ApplicationBlogComponent } from './application-blog/application-blog.component';
 import { IMDBComponent } from './imdb/imdb.component';
 import { AccountsApiComponent } from './accounts-api/accounts-api.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -41,7 +42,9 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"weather-Api",component:WeatherApiComponent},
 {path:"Blog-Api",component:ApplicationBlogComponent},
 {path:"imdb",component:IMDBComponent},
-{path:"account",component:AccountsApiComponent}
+{path:"account",component:AccountsApiComponent},
+{path:"user",component:UserProfileComponent}
+
 
 
 
