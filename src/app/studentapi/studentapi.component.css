@@ -1,0 +1,64 @@
+.img{
+    border-radius: 50px;
+}
+.parent{
+    display: flex;
+    /* justify-content: center; */
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    /* border: 1px solid red; */
+    overflow: auto;
+    justify-content: space-around;
+    /* margin-top: 10px; */
+}
+.card{
+    height: 300px;
+    width: 400px;
+    margin-top: 20px;
+    background-image:linear-gradient(orange,white,green);
+    color: blue;
+}
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    /* background-color: aqua; */
+    /* border: 1ps solid red; */
+    
+}
+.content{
+    position: relative;
+    display: flex;
+}
+.profile{
+    position: absolute;
+   left: 289px;
+}
+.details{
+   line-height: 30px;
+   padding-left: 10px;
+}
+.footer{
+    height: 150px;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* align-items: center; */
+
+}
+.f1{
+    display: flex;
+    justify-content: space-around;
+}
+.f2{
+    display: flex;
+    justify-content: space-around;
+}
+.function{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}

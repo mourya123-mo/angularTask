@@ -54,6 +54,7 @@ export class AccountsApiComponent {
     this.accountService.delete(id).subscribe(
       (data: any) => {
         this.accounts = data;
+        this.pageReload();
         console.log(this.accounts);
       },
       (err) => {

@@ -58,6 +58,7 @@ export class VehicleComponent {
     if(confirm("are you sure to delete")==true){
       this._vehicleSevice.delete(id).subscribe((data:any)=>{
         alert("Record deleted sucessfully")
+        this.pageLoad();
       },(err:any)=>{
         alert("Internal service error");
         this.pageLoad(); 

@@ -22,6 +22,9 @@ import { ApplicationBlogComponent } from './application-blog/application-blog.co
 import { IMDBComponent } from './imdb/imdb.component';
 import { AccountsApiComponent } from './accounts-api/accounts-api.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CreateVehicleComponentComponent } from './create-vehicle-component/create-vehicle-component.component';
+import { StudentapiComponent } from './studentapi/studentapi.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -43,7 +46,12 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"Blog-Api",component:ApplicationBlogComponent},
 {path:"imdb",component:IMDBComponent},
 {path:"account",component:AccountsApiComponent},
-{path:"user",component:UserProfileComponent}
+{path:"user",component:UserProfileComponent},
+{path:"createvehicle",component:CreateVehicleComponentComponent},
+{path:"student",component:StudentapiComponent},
+{path:"createstudent",component:CreateStudentComponent}
+
+
 
 
 

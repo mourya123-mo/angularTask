@@ -11,7 +11,7 @@ import { BmiComponent } from './bmi/bmi.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectivesComponent } from './directives/directives.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { LoginComponent } from './login/login.component';
@@ -27,6 +27,9 @@ import { ApplicationBlogComponent } from './application-blog/application-blog.co
 import { IMDBComponent } from './imdb/imdb.component';
 import { AccountsApiComponent } from './accounts-api/accounts-api.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { CreateVehicleComponentComponent } from './create-vehicle-component/create-vehicle-component.component';
+import { StudentapiComponent } from './studentapi/studentapi.component';
+import { CreateStudentComponent } from './create-student/create-student.component';
 
 @NgModule({
   declarations: [
@@ -52,13 +55,17 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
     ApplicationBlogComponent,
     IMDBComponent,
     AccountsApiComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    CreateVehicleComponentComponent,
+    StudentapiComponent,
+    CreateStudentComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule 
     
   ],
   providers: [],

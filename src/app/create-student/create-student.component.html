@@ -1,0 +1,33 @@
+<form [formGroup]="studentForm">
+    <label for="">Name</label> 
+    <input type="text" formControlName="name"><br>
+
+    <label for="">phone:</label> 
+    <input type="text" formControlName="phone"><br>
+
+    <label for="">City</label> 
+    <input type="text" formControlName="city"><br>
+
+    <label for="">Dob</label> 
+    <input type="text" formControlName="dob"><br>
+
+    <label for="">email</label> 
+    <input type="text" formControlName="email"><br>
+
+    <label for="">School logo</label> 
+    <input type="text" formControlName="school_logo"><br>
+
+    <label for="">School name</label> 
+    <input type="text" formControlName="school_name"><br>
+
+    <label for="">School city</label> 
+    <input type="text" formControlName="school_city"><br>
+
+    <label for="">pincode</label> 
+    <input type="number" formControlName="school_pin"><br>
+
+    <label for="">profile picture</label> 
+    <input type="number" formControlName="profile_picture"><br>
+
+    <button (click)="create()" class="btn btn-primary">Create</button>
+</form>
