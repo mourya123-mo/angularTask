@@ -1,0 +1,27 @@
+img{
+    border-radius: 100px;
+    height: 100px;
+}
+.parent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+    
+}
+.cards{
+    height: 500px;
+    width: 400px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    background-image: linear-gradient(rgb(148, 31, 31),gray
+    );
+    color: white;
+    border-radius: 10px;
+    padding-top: 10px;
+}

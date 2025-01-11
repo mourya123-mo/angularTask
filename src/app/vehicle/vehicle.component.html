@@ -1,4 +1,39 @@
 <h1>Vehicles</h1>
+<div>
+    <input type="text" [(ngModel)]="term" (keyup)="filter()">
+    <select [(ngModel)]="column">
+        <option>Vehicle</option>
+        <option >manufacturer</option>
+        <option >model</option>
+        <option >fuel</option>
+        <option >cost</option>
+        <option >color</option>
+    </select>
+    <select [(ngModel)]="order">
+        <option >asc</option>
+        <option >desc</option>
+    </select>
+    <button class="btn btn-primary" (click)="sort()">sort</button>
+    <input type="text" [(ngModel)]="term">
+
+    <select [(ngModel)]="limit">
+        <option>10</option>
+        <option >20</option>
+        <option >30</option>
+        <option >40</option>
+        <option >50</option>
+        <option >60</option>
+    </select>
+    <select [(ngModel)]="page">
+        <option >1</option>
+        <option >2</option>
+        <option >3</option>
+    </select>
+    <button class="btn btn-primary" (click)="pagination()">pagination</button>
+    <button class="btn btn-info" routerLink="/dashboard/createvehicle" >Create</button>
+
+</div>
+
 
 <table class="table table-dark">
     <thead>
@@ -8,6 +43,9 @@
             <th>Model</th>
             <th>Type</th>
             <th>Fuel</th>
+            <th>cost</th>
+            <th>Image</th>
+            <th>Action</th>
         </tr>
     </thead>
     
@@ -18,6 +56,11 @@
             <td>{{vehicle.model}}</td>
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.fuel}}</td>
+            <td>{{vehicle.cost}}</td>
+            <td><img height="70px" width="70px" src="{{vehicle.image}}" alt=""></td>
+            <td><button (click)="delete(vehicle.id)" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+              </svg></button></td>
         </tr>
     </tbody>
 </table>

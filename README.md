@@ -1,37 +1,41 @@
-# AngularTask
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
-
- 
-
-
-
-
-  
-
+<div class="parent">
+    <div class="main">
+        <div class="container mt-3">
+            <div *ngFor="let student of students" class="card">
+                <div>
+              <div class="card-header">
+                <img class="img" height="50px"  src="{{student.school_logo}}" alt="">
+                <h6>{{student.school_name}}</h6>
+              </div>
+            </div>
+            <div>
+              <div class="card-body"> 
+                <div class="details">          
+                <span>Name: {{student.name}}</span><br>
+                <span>phone:{{student.phone}}</span><br>
+                <span>DOB:{{student.dob}}</span><br>
+                <span>Email:{{student.email}}</span><br>
+                <span>City:{{student.city}}</span>
+            </div> 
+        </div>
+                    <div class="profile">
+                        <img height="150px" width="150px" src="{{student.profile_picture}}" alt="">
+                    </div>
+                    <div>
+              </div> 
+              <div class="card-footer">
+                <div class="f1">
+                <span>shoolCity: {{student.school_city}}</span>
+                <span>shoolPin: {{student.school_pin}}</span>
+            </div>
+            <div class="f2">
+                <button class="btn btn-warning">Veiw</button>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </div>
+              </div>
+            </div>
+            </div>
+          </div>
+    </div>
+</div>
