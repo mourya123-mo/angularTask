@@ -1,0 +1,86 @@
+<div class="parent">
+    <form action=""[formGroup]="studentForm" (ngSubmit)="create()">
+        <label for="">Name:</label><br>
+        <input type="text" formControlName="name"><br>
+        <div *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched">
+            <p *ngIf="studentForm.get('name')?.errors?.['required']">name is required</p>
+
+        </div>
+
+        <label for="">Class:</label><br>
+        <input type="text" formControlName="class"><br>
+
+        <label for="">Father Name:</label><br>
+        <input type="text" formControlName="fatherName"><br>
+
+        <label for="">email:</label><br>
+        <input type="text" formControlName="email"><br>
+        <div *ngIf="studentForm.get('email')?.invalid && studentForm.get('email')?.touched">
+            <p *ngIf="studentForm.get('email')?.errors?.['required']">email is required</p>
+            <p *ngIf="studentForm.get('email')?.errors?.['email']">Email invalid</p>
+        </div>
+
+        <label for="">Dob:</label><br>
+        <input type="text" formControlName="dob"><br>
+
+        <label for="">Mobile:</label><br>
+        <input type="text" formControlName="mobile"><br>
+        <div *ngIf="studentForm.get('mobile')?.invalid && studentForm.get('mobile')?.touched">
+            <p *ngIf="studentForm.get('mobile')?.errors?.['required']">mobile is required</p>
+            <p *ngIf="studentForm.get('mobile')?.errors?.['minlength']">minimum is 10 digits</p>    
+            <p *ngIf="studentForm.get('mobile')?.errors?.['maxlength']">maximum is 10 digits</p>
+
+        </div>
+        
+
+        <div formGroupName="address">
+            <label for="">addressLine:</label><br>
+            <input type="text" formControlName="addressLine"><br>
+
+            <label for="">City:</label><br>
+            <input type="text" formControlName="city"><br>
+
+            <label for="">state:</label><br>
+            <input type="text" formControlName="state"><br>
+
+            <label for="">pincode:</label><br>
+            <input type="text" formControlName="pincode"><br>
+        </div>
+        <button class="btn btn-primary" (click)="addMarks()">Add Marks</button>
+        <div formArrayName="marks">
+            <div *ngFor="let mark of marksFormArray.controls; let i=index">
+                <div formGroupName="{{i}}">
+                    <h1>mark{{i+1}}</h1>
+
+                    <label for="">class:</label>
+                    <input type="number" formControlName="class"><br>
+
+                    <label for="">year:</label>
+                    <input type="date" formControlName="year"><br>
+
+                    <label for="">percentage:</label>
+                    <input type="number" formControlName="percentage"><br>
+                         
+                    
+                </div>
+                <button (click)="delete(i)">Delete</button>
+            </div>
+        </div>
+        <div *ngIf="studentForm.get('type')?.value=='dayScholor'">
+            <label for="">bussfess:</label>
+            <input type="number" formControlName="bussfee">
+        </div>
+
+        <div *ngIf="studentForm.get('type')?.value=='residential'">
+            <label for="">hostelfee:</label>
+            <input type="number" formControlName="hostelfee">
+        </div>
+          
+        <label for="">Type:</label>
+        <input type="radio" name="type" formControlName="type" value="dayScholor" class="radio ">
+        <label for="">dayScholor</label>
+        <input  type="radio" name="type" formControlName="type" value="residential" class="radio ">
+        <label for="">residential</label><br>
+    <button class="btn btn-primary" >Submit</button>
+    </form>
+</div>
