@@ -27,33 +27,34 @@ import { StudentapiComponent } from './studentapi/studentapi.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { UsersComponent } from './users/users.component';
 import { StudentformTaskComponent } from './studentform-task/studentform-task.component';
+import { AutenticationGuard } from './autentication.guard';
 
 const routes: Routes = [{path:'',component:LoginComponent,
- },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
-  {path:'welcome',component:WelcomeComponent}
-, {path:'caliculator',component:CaliculatorComponent}
-,{path:'bmi',component:BmiComponent}
-,{path:'rectangle',component:RectangleComponent},
-{path:'circle',component:CircleComponent},
-{path:'data-binding',component:DataBindingComponent},
-{path:'directives',component:DirectivesComponent},
-{path:"pipes",component:PipesComponent},
-{path:"employee",component:EmployeeComponent},
-{path:"flipkart",component:FlipkartComponent},
-{path:"vehicle",component:VehicleComponent},
-{path:"flipkartapi",component:FlipkartApiComponent},
-{path:"mail",component:MailComponent},
-{path:"Pintrust-Api",component:PintrestComponent},
-{path:"weather-Api",component:WeatherApiComponent},
-{path:"Blog-Api",component:ApplicationBlogComponent},
-{path:"imdb",component:IMDBComponent},
-{path:"account",component:AccountsApiComponent},
-{path:"user",component:UserProfileComponent},
-{path:"createvehicle",component:CreateVehicleComponentComponent},
-{path:"student",component:StudentapiComponent},
-{path:"createstudent",component:CreateStudentComponent},
-{path:"users",component:UsersComponent},
-{path:"studentFormTask",component:StudentformTaskComponent}
+ },{path:'dashboard',canActivate:[AutenticationGuard],component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
+  {path:'welcome',canActivate:[AutenticationGuard],component:WelcomeComponent}
+, {path:'caliculator', canActivate:[AutenticationGuard],component:CaliculatorComponent}
+,{path:'bmi', canActivate:[AutenticationGuard],component:BmiComponent}
+,{path:'rectangle', canActivate:[AutenticationGuard],component:RectangleComponent},
+{path:'circle', canActivate:[AutenticationGuard],component:CircleComponent},
+{path:'data-binding', canActivate:[AutenticationGuard],component:DataBindingComponent},
+{path:'directives', canActivate:[AutenticationGuard],component:DirectivesComponent},
+{path:"pipes", canActivate:[AutenticationGuard],component:PipesComponent},
+{path:"employee", canActivate:[AutenticationGuard],component:EmployeeComponent},
+{path:"flipkart", canActivate:[AutenticationGuard],component:FlipkartComponent},
+{path:"vehicle", canActivate:[AutenticationGuard],component:VehicleComponent},
+{path:"flipkartapi", canActivate:[AutenticationGuard],component:FlipkartApiComponent},
+{path:"mail", canActivate:[AutenticationGuard],component:MailComponent},
+{path:"Pintrust-Api", canActivate:[AutenticationGuard],component:PintrestComponent},
+{path:"weather-Api", canActivate:[AutenticationGuard],component:WeatherApiComponent},
+{path:"Blog-Api", canActivate:[AutenticationGuard],component:ApplicationBlogComponent},
+{path:"imdb", canActivate:[AutenticationGuard],component:IMDBComponent},
+{path:"account", canActivate:[AutenticationGuard],component:AccountsApiComponent},
+{path:"user", canActivate:[AutenticationGuard],component:UserProfileComponent},
+{path:"createvehicle", canActivate:[AutenticationGuard],component:CreateVehicleComponentComponent},
+{path:"student", canActivate:[AutenticationGuard],component:StudentapiComponent},
+{path:"createstudent", canActivate:[AutenticationGuard],component:CreateStudentComponent},
+{path:"users", canActivate:[AutenticationGuard],component:UsersComponent},
+{path:"studentFormTask", canActivate:[AutenticationGuard],component:StudentformTaskComponent}
 
 
 

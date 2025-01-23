@@ -23,6 +23,7 @@ export class LoginComponent {
       (data:any)=>{
         console.log(data);
         alert("login sucessful");
+        sessionStorage.setItem('token',data.token);
         this._router.navigateByUrl("/dashboard");
       },(err:any)=>{
         alert("invalid credentials")
