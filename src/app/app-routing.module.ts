@@ -25,6 +25,8 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { CreateVehicleComponentComponent } from './create-vehicle-component/create-vehicle-component.component';
 import { StudentapiComponent } from './studentapi/studentapi.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { UsersComponent } from './users/users.component';
+import { StudentformTaskComponent } from './studentform-task/studentform-task.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -49,7 +51,9 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"user",component:UserProfileComponent},
 {path:"createvehicle",component:CreateVehicleComponentComponent},
 {path:"student",component:StudentapiComponent},
-{path:"createstudent",component:CreateStudentComponent}
+{path:"createstudent",component:CreateStudentComponent},
+{path:"users",component:UsersComponent},
+{path:"studentFormTask",component:StudentformTaskComponent}
 
 
 
