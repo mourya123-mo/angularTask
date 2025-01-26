@@ -57,8 +57,8 @@
                 <span>shoolPin: {{student.school_pin}}</span>
             </div>
             <div class="f2">
-                <button class="btn btn-warning">Veiw</button>
-                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-warning" routerLink="/dashboard/student-details/{{student.id}}" >Veiw</button>
+                <button  routerLink="/dashboard/edit-student/{{student.id}}" class="btn btn-primary">Edit</button>
                 <button class="btn btn-danger" (click)="deleteStudent(student.id)">Delete</button>
             </div>
            </div>

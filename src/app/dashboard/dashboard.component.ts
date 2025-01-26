@@ -15,5 +15,6 @@ export class DashboardComponent {
     this._router.navigateByUrl("");
     console.log("logout");
     alert("logout sucessfully");
+    this._router.navigateByUrl("");
   }
 }

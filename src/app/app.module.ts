@@ -32,6 +32,8 @@ import { StudentapiComponent } from './studentapi/studentapi.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
 import { UsersComponent } from './users/users.component';
 import { StudentformTaskComponent } from './studentform-task/studentform-task.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +64,9 @@ import { StudentformTaskComponent } from './studentform-task/studentform-task.co
     StudentapiComponent,
     CreateStudentComponent,
     UsersComponent,
-    StudentformTaskComponent
+    StudentformTaskComponent,
+    VehicleDetailsComponent,
+    StudentDetailsComponent
   ],
   imports: [
     BrowserModule,

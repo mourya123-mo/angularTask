@@ -1,3 +1,6 @@
+<h1 *ngIf="!id">Create Student</h1>
+<h1 *ngIf="id">Update Student</h1>
+
 <form [formGroup]="studentForm">
     <label for="">Name</label> 
     <input type="text" formControlName="name"><br>
@@ -27,7 +30,7 @@
     <input type="number" formControlName="school_pin"><br>
 
     <label for="">profile picture</label> 
-    <input type="number" formControlName="profile_picture"><br>
+    <input type="text" formControlName="profile_picture"><br>
 
-    <button (click)="create()" class="btn btn-primary">Create</button>
+    <button (click)="submit()" class="btn btn-primary">submit</button>
 </form>

@@ -28,6 +28,8 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { UsersComponent } from './users/users.component';
 import { StudentformTaskComponent } from './studentform-task/studentform-task.component';
 import { AutenticationGuard } from './autentication.guard';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',canActivate:[AutenticationGuard],component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -54,7 +56,11 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"student", canActivate:[AutenticationGuard],component:StudentapiComponent},
 {path:"createstudent", canActivate:[AutenticationGuard],component:CreateStudentComponent},
 {path:"users", canActivate:[AutenticationGuard],component:UsersComponent},
-{path:"studentFormTask", canActivate:[AutenticationGuard],component:StudentformTaskComponent}
+{path:"studentFormTask", canActivate:[AutenticationGuard],component:StudentformTaskComponent},
+{path:"vehicle-details/:id", canActivate:[AutenticationGuard],component:VehicleDetailsComponent},
+{path:"edit-vehicle/:id", canActivate:[AutenticationGuard],component:CreateVehicleComponentComponent},
+{path:"student-details/:id", canActivate:[AutenticationGuard],component:StudentDetailsComponent},
+{path:"edit-student/:id", canActivate:[AutenticationGuard],component:CreateStudentComponent},
 
 
 
