@@ -1,0 +1,8 @@
+<p>parent works!</p>
+<!-- <app-child [a]="10" (bEvent)="store($event)"></app-child> -->
+
+<input type="text" [(ngModel)]="term">
+<app-child [star]="term" (sEvent)="catch($event)"></app-child>
+<h1>{{response}}</h1>
+
+

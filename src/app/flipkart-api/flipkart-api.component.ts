@@ -15,9 +15,7 @@ export class FlipkartApiComponent {
         this.products=data
           console.log(this.products);
 
-        
-       
-        
+ 
         
       }
     );

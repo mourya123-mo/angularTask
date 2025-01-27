@@ -35,6 +35,10 @@ import { StudentformTaskComponent } from './studentform-task/studentform-task.co
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { Sibiling2Component } from './sibiling2/sibiling2.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +72,11 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     StudentformTaskComponent,
     VehicleDetailsComponent,
     StudentDetailsComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    Sibiling1Component,
+    Sibiling2Component,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,

@@ -30,6 +30,10 @@ import { StudentformTaskComponent } from './studentform-task/studentform-task.co
 import { AutenticationGuard } from './autentication.guard';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { Sibiling1Component } from './sibiling1/sibiling1.component';
+import { Sibiling2Component } from './sibiling2/sibiling2.component';
+import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',canActivate:[AutenticationGuard],component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
@@ -61,6 +65,10 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"edit-vehicle/:id", canActivate:[AutenticationGuard],component:CreateVehicleComponentComponent},
 {path:"student-details/:id", canActivate:[AutenticationGuard],component:StudentDetailsComponent},
 {path:"edit-student/:id", canActivate:[AutenticationGuard],component:CreateStudentComponent},
+{path:"sibiling1", canActivate:[AutenticationGuard],component:Sibiling1Component},
+{path:"sibiling2", canActivate:[AutenticationGuard],component:Sibiling2Component},
+{path:"child", canActivate:[AutenticationGuard],component:ChildComponent},
+{path:"parent", canActivate:[AutenticationGuard],component:ParentComponent},
 
 
 
