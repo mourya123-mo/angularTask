@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class VehicleService {
   baseUrl:string="https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction"
+  // baseUrl:string="/assets/data.json"
   constructor( private _httpClient:HttpClient) { }
   getVehicles():Observable<any>{
     return this._httpClient.get(this.baseUrl)
@@ -29,7 +30,7 @@ export class VehicleService {
     return this._httpClient.post(this.baseUrl,data);
   }
   getVehicle(id:number):Observable<any>{
-    return this._httpClient.get(this.baseUrl+id);
+    return this._httpClient.get(this.baseUrl+"/"+id);
   }
   updateVehicle(id:number,data:any){
     return this._httpClient.put(this.baseUrl+id,data)

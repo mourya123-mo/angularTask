@@ -59,7 +59,7 @@
             <td>{{vehicle.model}}</td>
             <td>{{vehicle.type}}</td>
             <td>{{vehicle.fuel}}</td>
-            <td>{{vehicle.cost}}</td>
+            <td>{{vehicle.cost | balance}}</td>
             <td>{{vehicle.color}}</td>
             <td><img height="70px" width="70px" src="{{vehicle.image}}" alt=""></td>
             <td><button (click)="delete(vehicle.id)" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">

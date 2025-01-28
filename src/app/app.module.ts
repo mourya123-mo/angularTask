@@ -18,7 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FlipkartApiComponent } from './flipkart-api/flipkart-api.component';
 import { MailComponent } from './mail/mail.component';
 import { PintrestComponent } from './pintrest/pintrest.component';
@@ -40,6 +40,10 @@ import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { RatingsComponent } from './ratings/ratings.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -78,17 +82,27 @@ import { RatingsComponent } from './ratings/ratings.component';
     Sibiling2Component,
     ChildComponent,
     ParentComponent,
-    RatingsComponent
+    RatingsComponent,
+    CapitalDirective,
+    BalancePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    AboutUsModule
     
   ],
-  providers: [],
+  providers: [
+   {
+    provide:HTTP_INTERCEPTORS,
+    useClass:TokenInterceptor,
+    multi:true
+   }
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { User } from '../user';
+import { tcsMail } from '../validators';
+import { passwordValidator } from '../passwordValidator';
 
 @Component({
   selector: 'app-users',
@@ -9,8 +12,8 @@ import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 export class UsersComponent {
   public userForm:FormGroup=new FormGroup({
     name:new FormControl('',[Validators.required]),
-    email:new FormControl('',[Validators.required,Validators.email]),
-    password:new FormControl('',[Validators.required,Validators.minLength(6),Validators.maxLength(10)]),
+    email:new FormControl('',[Validators.required,Validators.email,tcsMail]),
+    password:new FormControl('',[Validators.required,passwordValidator]),
     mobile:new FormControl('',[Validators.required,Validators.min(1000000000),Validators.max(9999999999)]),
     adress:new FormGroup({
       village:new FormControl(''),
@@ -53,6 +56,11 @@ delete(i:number){
 
   create(){
     console.log(this.userForm);
+  }
+
+  user:User={
+    name: '',
+    age: 0
   }
 
   

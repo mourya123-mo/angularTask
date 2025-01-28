@@ -34,6 +34,8 @@ import { Sibiling1Component } from './sibiling1/sibiling1.component';
 import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { AboutCeoComponent } from './about-us/about-ceo/about-ceo.component';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
  },{path:'dashboard',canActivate:[AutenticationGuard],component:DashboardComponent, children: [ {path:'home',canActivate:[AutenticationGuard],component:HomeComponent},
@@ -69,6 +71,8 @@ const routes: Routes = [{path:'',component:LoginComponent,
 {path:"sibiling2", canActivate:[AutenticationGuard],component:Sibiling2Component},
 {path:"child", canActivate:[AutenticationGuard],component:ChildComponent},
 {path:"parent", canActivate:[AutenticationGuard],component:ParentComponent},
+{path:"about-ceo", canActivate:[AutenticationGuard],component:AboutCeoComponent},
+{path:"about-company", canActivate:[AutenticationGuard],component:AboutCompanyComponent},
 
 
 
