@@ -39,6 +39,7 @@ import { Sibiling1Component } from './sibiling1/sibiling1.component';
 import { Sibiling2Component } from './sibiling2/sibiling2.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { RatingsComponent } from './ratings/ratings.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { ParentComponent } from './parent/parent.component';
     Sibiling1Component,
     Sibiling2Component,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    RatingsComponent
   ],
   imports: [
     BrowserModule,

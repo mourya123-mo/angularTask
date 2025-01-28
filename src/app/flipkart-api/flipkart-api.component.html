@@ -4,6 +4,8 @@
         <h6>{{product.category}}</h6>
       <div>  {{product.description| slice:0:40}}....</div>
         <p style="color:red">{{product.rating.count}}</p>
-      <div class="rate">  {{product.rating.rate}}</div>
+      <div class="rate">  {{product.rating.rate}} <small>
+        <app-ratings [ratings]="product.rating.rate"></app-ratings>
+      </small> </div>
     </div>
 </div>

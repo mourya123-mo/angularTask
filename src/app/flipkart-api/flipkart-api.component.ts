@@ -14,9 +14,6 @@ export class FlipkartApiComponent {
       (data:any)=>{
         this.products=data
           console.log(this.products);
-
- 
-        
       }
     );
      

@@ -36,7 +36,7 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [{path:'',component:LoginComponent,
- },{path:'dashboard',canActivate:[AutenticationGuard],component:DashboardComponent, children: [ {path:'home',component:HomeComponent},
+ },{path:'dashboard',canActivate:[AutenticationGuard],component:DashboardComponent, children: [ {path:'home',canActivate:[AutenticationGuard],component:HomeComponent},
   {path:'welcome',canActivate:[AutenticationGuard],component:WelcomeComponent}
 , {path:'caliculator', canActivate:[AutenticationGuard],component:CaliculatorComponent}
 ,{path:'bmi', canActivate:[AutenticationGuard],component:BmiComponent}
